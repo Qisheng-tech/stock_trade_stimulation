@@ -1,0 +1,28 @@
+#spring.application.name=stock_trading_Simulation
+spring:
+  datasource:
+
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/database?serverTimezone=Asia/Shanghai
+    username: root
+    password: xxxx
+
+  data:
+    redis:
+      host: xxxx
+      port: 6379
+      password: xxxx
+      database: 0
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 0
+          max-wait: 1000ms
+
+mybatis:
+  type-aliases-package: com.stock_trade.Entity
+  configuration:
+    map-underscore-to-camel-case: true
+#  让 MyBatis 自动把数据库中的下划线命名，转换成 Java 中常用的驼峰命名。
+
